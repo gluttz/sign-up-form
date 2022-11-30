@@ -220,3 +220,7 @@ form input:focus{
   color: var(--accentColor);
   font-weight: bold;
 }
+
+.info3 button:hover{
+  background-color: rgb(97, 119, 77);
+}
