@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up form project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="heroContainer">
+        <div class="heading">
+            <div class="logoContainer">
+                <div class="logoImageContainer">
+                   <img src="images/odin-lined.png" alt="" class="logo">
+                </div>
+                <h1 class="logoText">ODIN</h1>
+            </div>
+        </div>
+        <div class="creditContainer">
+            <p>Photo by Halie West on Unsplash</p>
+        </div>
+    </div>
+    <div class="infoContainer">
+        <div class="info1 infoPanel">
+            <p>This is not a real online service! You know you need something 
+                like this in your life to help you realize your deepest dreams.</p>
+            <p>Sign up <em>now</em> to get started.</p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="info2 infoPanel">
+            <h1>Let's do this!</h1>
+            <form action="" method="get" class="form" id="form">
+                <div class="formFirstName">
+                    
+                    <input type="text" 
+                           id="firstName" 
+                           name="firstName" 
+                           placeholder="First Name"
+                           value=""
+                           maxlength="20">
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="formLastName">
+                    
+                    <input type="text"
+                           id="LastName"
+                           name="lastName"
+                           placeholder="Last Name"
+                           value=""
+                           maxlength="20">
+                    <label for="LastName">Last Name</label>
+                </div>
+                <div class="formEmail">
+                    
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="E-mail *"
+                           value=""
+                           required>
+                    <label for="email">Email *</label>
+                </div>
+                <div class="formPhone">
+                    
+                    <input type="tel"
+                           id="phoneNumber"
+                           name="phoneNumber"
+                           placeholder="Phone Number"
+                           value=""
+                           maxlength="11">
+                    <label for="phoneNumber">Phone Number</label>
+                </div>
+                <div class="formPassword">
+                    
+                    <input type="text"
+                           id="password"
+                           name="password"
+                           minlength="4"
+                           maxlength="20"
+                           placeholder="Password *"
+                           required
+                           class="passField">
+                    <label for="password">Password *</label>
+                </div>
+                <div class="formConfirmPassword">
+                    
+                    <input type="text"
+                           id="confirmPassword"
+                           name="confirmPassword"
+                           minlength="4"
+                           maxlength="20"
+                           placeholder="Confirm Password *"
+                           required
+                           class="passField">
+                    <label for="confirmPassword">Confirm Password *</label>
+                </div>
+            </form>
+        </div>
+        <div class="info3 infoPanel">
+            <button type="submit" form="form">Create Account</button>
+            <p>Already have an account? <a href="">Log in</a></p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

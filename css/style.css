@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Norse';
+  src: url(../fonts/Norse-Bold.otf);
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+*{
+  /* border: 1px solid red; */
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+*:focus {outline:none !important}
+
+:root{
+  --textColor: rgb(51, 51, 51);
+  --backgroundColor: rgb(226, 226, 226);
+  --shadowColor: grey;
+  --accentColor: rgb(89, 109, 72);
+  --accentTransparent: rgba(89, 109, 72, 30%);
+  --focusColor: rgb(28, 28, 223);
+  --focusTransparent: rgba(28, 28, 223, 20%);
+  --invalidColor: rgb(184, 27, 27);
+  --invalidTransparent: rgba(184, 27, 27, 10%);
+
+}
+
+body{
+  display: flex;
+ 
+  height: 100vh;
+}
+
+.heroContainer{
+  display: flex;
+  background-color: var(--backgroundColor);
+  background-image: url(../images/halie-west.jpg);
+  background-size: cover;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.heading{
+  display: flex;
+  width: 100%;
+  margin-top: 25%;
+  background-color: rgba(0, 0, 0, 50%);
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.logoImageContainer{
+  display: flex;
+  min-width: 100px;
+}
+
+.logo{
+  max-width: 100%;
+  max-height: 100%;
+}
+.logoText{
+  font-family: Norse;
+  font-size: clamp(3.5rem, 8vw + 2rem, 6rem);
+  color: var(--backgroundColor);
+}
+
+.creditContainer{
+  margin-top: auto;
+}
+.creditContainer p{
+  color: var(--backgroundColor);
+  background-color: rgba(0, 0, 0, 50%);
+}
+
+.infoContainer{
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  background-color: var(--backgroundColor);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.infoPanel{
+  flex: 1;
+  color: var(--textColor);
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 40px;
+  padding-bottom: 50px;
+}
+.info1 p{
+  max-width: 60ch;
+  
+}
+
+.info1 p:last-of-type{
+  margin-top: 30px;
+}
+
+.info2{
+  box-shadow: 0 2px 10px var(--shadowColor);
+  padding: 30px 40px;
+}
+
+.info2:focus-within{
+  box-shadow: 0 2px 20px var(--shadowColor);
+}
+
+.info2 h1{
+  margin: 0 0 30px 0;
+ 
+}
+
+form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 800px;
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+form label{
+  font-size: 1.3rem;
+  display: none;
+  position: absolute;
+  bottom: 45px;
+}
+
+form input{
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: var(--backgroundColor);
+  
+  color: var(--textColor);
+  height: 40px;
+}
+
+form input:focus + label{
+  display: block;
+  
+}
+
+form input:focus::placeholder{
+  color: transparent;
+}
+
+form input:valid{
+  border: 3px solid var(--accentColor);
+  background-color: var(--accentTransparent);
+}
+
+form input:invalid{
+  border: 3px solid var(--invalidColor);
+  background-color: var(--invalidTransparent);
+}
+
+form input:placeholder-shown{
+  border: 1px solid var(--shadowColor);
+  background: transparent;
+}
+
+form input:hover{
+  border: 1px solid var(--focusColor);
+  box-shadow: 0px 2px 3px var(--shadowColor);
+}
+
+form input:focus{
+  border: 3px solid var(--focusColor);
+  box-shadow: 0px 2px 10px var(--shadowColor);
+}
+
+.info3{
+  display: flex;
+  flex-direction: column;
+  margin: 40px 40px;
+  gap: 40px;
+}
+
+.info3 button{
+  display: block;
+  width: 300px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: var(--accentColor);
+  color: var(--backgroundColor);
+  font-weight: bold;
+  
+}
+.info3 a{
+  text-decoration: none;
+  color: var(--accentColor);
+  font-weight: bold;
+}
